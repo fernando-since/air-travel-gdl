@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+---
+
+<Layout title="404">
+
+    <section class="error-page" >
+        <div class="container">
+            <div class="info">
+                <div class="tag">
+                    404
+                </div>
+                <div class="flex-col my-10">
+                    <div class="title text-xl">
+                        Oops! Sitio no encontrada
+                    </div>
+                    <div class="description text-lg">
+                        Lo sentimos, esta direccion no pudo ser encontrada.
+                    </div>
+                </div>
+                <div>
+                    <a href="/">
+                        <button type="button" class="py-2.5 px-5 bg-[color:var(--color-secondary)] rounded-full border hover:bg-[color:var(--color-primary)] text-[color:var(--text-color)] focus:z-10 focus:ring-4 focus:ring-gray-100 dark:bg-[color:var(--color-primary)] hover:dark:bg-[color:var(--color-secondary)] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Regresar</button>
+                    </a>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="/public/icons/alert.svg" alt="">
+            </div>
+        </div>
+        
+    
+    </section>
+
+	
+    <Footer/>
+</Layout>
+
+
+
+
+<style>
+
+    .error-page{
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        flex-wrap: wrap-reverse;
+        margin-bottom: 10vh;
+    }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 15vh;
+        }
+            .info {
+                padding: 2rem;
+            }
+                .tag {
+                    padding: 8px 25px;
+                    background-color: var(--box-border);
+                    width: min-content;
+                    border-radius: 25px;
+                }
+            .icon {
+                padding: 2rem;
+                max-width: 200px;
+            }
+
+
+    @media only screen and (max-width: 720px) {
+        .error-page{
+            height: auto;
+        }
+            .container {
+                margin-top: 0vh;
+            }
+	}
+
+</style>

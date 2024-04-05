@@ -1,0 +1,29 @@
+---
+const services = [
+	{
+		title: 'Service 1',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+	{
+		title: 'Service 2',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+	{
+		title: 'Service 3',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+]
+---
+
+<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between mb-48">
+  {
+    services.map((service) => {
+      return (
+        <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+          <h3 class="text-lg font-bold">{service.title}</h3>
+          <p class="text-md"> {service.text}</p>
+        </div>
+      )
+    })
+  }
+</section>

@@ -1,0 +1,194 @@
+---
+
+---
+
+<div>
+	<!-- Header -->
+	<header class=""
+        class:list={[
+            { sticky: true },
+            "absolute inset-x-0 top-0 z-50 opacity-88 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out data-aw-sticky-header",
+        ]}
+    >
+		<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="/" class="-m-1.5 p-1.5 flex items-center justify-center">
+                    <img class="h-8 w-auto" src="/logo.png" alt="">
+                    <span class="ml-1 text-xl">Nombre marca</span>
+                </a>
+            </div>
+
+            <!-- ELEMENTS -->
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="/not-found" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_WE_OFFER">404</a>
+                <a href="#section" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_TESTIMONIAL">section 1</a>
+                <a href="#section" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_PROJECTS">section 2</a>
+                <a href="#section" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_CONTACT">section 3</a>
+            </div>
+
+            <div class="flex justify-center items-center">
+
+                <!-- TRANSLATE -->
+                <div class="lg:flex lg:flex-1 mx-5 lg:justify-end change-language font-bold cursor-pointer">
+                    <span class="language active-language language-es">es</span>/<span class="language language-en">en</span>
+                </div>
+    
+                <!-- MODE LIGTH / DARK -->
+                <button data-switch-theme class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border color-bg mx-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:flex hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                    <span class="sr-only">switch theme</span>
+                </button>
+    
+                <div id="openNavBar" class="flex lg:hidden">
+                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                    </button>
+                </div>
+            </div>
+		</nav>
+
+
+		<!-- Mobile menu, show/hide based on menu open state. -->
+		<div id="navBar" class="hidden lg:hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-50"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-container">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="close-nav-bar -m-1.5 p-1.5 flex items-center justify-center">
+                        <img class="h-8 w-auto" src="/logo.png" alt="">
+                        <span class="ml-1 text-xl">Nombre marca</span>
+                    </a>
+                    <button type="button" class="close-nav-bar -m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                        <a href="/#offer-link"
+                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_WE_OFFER">Te Ofrecemos</a>
+                        <a href="/#testimonio-link"
+                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_TESTIMONIAL">Testimonios</a>
+                        <a href="/#projects-link"
+                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_PROJECTS">Proyectos</a>
+                        <a href="/#contact-link"
+                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_CONTACT">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</header>
+
+	<!-- Footer -->
+	<!-- <div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<Footer/>
+	</div> -->
+
+</div>
+
+
+
+
+<!-- CHANGE MODE THEME -->
+<script>
+    const switchTheme = document.querySelector(
+      "[data-switch-theme]"
+    ) as HTMLButtonElement;
+
+    if (
+      localStorage.getItem("appTheme") === "dark" ||
+      (!("appTheme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    if (switchTheme) {
+      switchTheme.addEventListener("click", (e) => {
+        e.preventDefault();
+        const doc = document.documentElement;
+        if (doc) {
+          if (localStorage.getItem("appTheme")) {
+            if (localStorage.getItem("appTheme") === "light") {
+              doc.classList.add("dark");
+              localStorage.setItem("appTheme", "dark");
+            } else {
+              document.documentElement.classList.remove("dark");
+              localStorage.setItem("appTheme", "light");
+            }
+          } else {
+            if (doc.classList.contains("dark")) {
+              doc.classList.remove("dark");
+              localStorage.setItem("appTheme", "light");
+            } else {
+              doc.classList.add("dark");
+              localStorage.setItem("appTheme", "dark");
+            }
+          }
+        }
+      });
+    }
+
+
+    // Navbar
+    const closeNavBar = document.getElementsByClassName('close-nav-bar')!;
+    const openNavBar = document.getElementById('openNavBar')!;
+    const navBar = document.getElementById('navBar')!;
+
+    for(var i = 0; i < closeNavBar.length; i++) {
+        closeNavBar[i].addEventListener('click', toggleMenu);
+    }
+    openNavBar.addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
+        navBar.style.animationPlayState = 'running';
+        navBar.classList.toggle("hidden");
+    }
+
+</script>
+
+
+<style>
+    .shadow-container { 
+        box-shadow: -22px 0px 22px -30px rgb(255 255 255 / 75%);
+        background: var(--color-bg);
+    }
+
+
+    #navBar {
+        position: relative;
+        animation-name: showSlowly;
+        animation-duration: 1s;
+        animation-delay: 0s;
+    }
+
+        @keyframes showSlowly {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+    
+</style>

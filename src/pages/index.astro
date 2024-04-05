@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Introduction from '../components/Introduction.astro';
+import Footer from '../components/Footer.astro';
+import FrecuentQuestions from '../components/FrecuentQuestions.astro';
+import FollowUs from '../components/FollowUs.astro';
+
+// Supports weights 100-900
+import '@fontsource-variable/onest';
+---
+
+<Layout title="Bienvenido a Nombre marca">
+
+	<main >
+		<div class="principal-container">
+			<Hero/>
+			<Services/>
+			<Introduction/>
+			<FrecuentQuestions/>
+			<FollowUs/>
+			<Footer/>
+			
+		</div>
+	</main>
+	
+</Layout>
+
+
+
+<style is:global>
+	* {
+		font-family: 'Onest Variable', sans-serif;
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+	}
+		.principal-container {
+			padding: 1rem 8rem;
+		}
+
+	
+	@media only screen and (min-width: 1920px) {
+		.principal-container {
+			max-width: 1920px;
+		}
+	}
+
+	@media only screen and (max-width: 720px) {
+		.principal-container {
+			width: 100%;
+			padding: 50px;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.principal-container {
+			width: 100%;
+			padding: 20px;
+		}
+	}
+
+
+</style>

@@ -1,0 +1,19 @@
+[
+	{
+		"title": "Pregunta 1",
+		"description": "Comienza alrededor del decimonoveno día de desarrollo embrionario después de la fertilización."
+	},
+	{
+		"title": "Pregunta 2",
+		"description": [
+            "Se desarrollan eritrocitos, granulocitos y monocitos que colonizan el hígado fetal, el timo, el bazo, la placenta y, en última instancia, el espacio de la médula ósea en la fase medular final.",
+            "El bazo, el riñón, el timo y los ganglios linfáticos en desarrollo contribuyen al proceso hematopoyético durante esta fase.",
+            "El timo, se convierte en el sitio principal de producción de células T. ",
+            "El riñón y el bazo producen células B."
+        ]
+	},
+	{
+		"title": "Pregunta 3",
+		"description": "Comienza antes del quinto mes del desarrollo fetal, en la cavidad de la médula ósea."
+	}
+]
