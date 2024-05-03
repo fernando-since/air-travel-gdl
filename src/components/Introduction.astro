@@ -1,20 +1,51 @@
 ---
 import ContactBtn from "./ContactBtn.astro";
+
+const motives = [
+	{
+		title: 'Experiencia y competencia profesional',
+		text: 'Un dentista con años de experiencia y una sólida formación académica. Habilidad para abordar una amplia gama de problemas dentales de manera efectiva.',
+	},
+	{
+		title: 'Atención personalizada',
+		text: 'Un dentista que se preocupa por conocer a sus pacientes, entender sus necesidades y proporcionar un tratamiento personalizado y centrado en el paciente.',
+	},
+	{
+		title: 'Enfoque integral de la salud bucal',
+		text: 'Promovemos un enfoque integral de la salud bucal, incluyendo educación sobre prevención, hábitos saludables y cuidado a largo plazo.',
+	},
+]
+
 ---
 
+<section id="nosotros" class="w-full  mx-auto  xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 ">
+  <div class="flex flex-col gap-4 items-center lg:items-start py-6">
 
-<section class="w-full  mx-auto  xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 ">
-  <div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
-  <h2 class="text-xl font-bold">Que hace la empresa</h2>
-    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias sunt accusamus nostrum, ipsum enim quibusdam repellat labore inventore minus fugit voluptas quidem reiciendis. Adipisci, obcaecati! Rem obcaecati alias corporis?</p>
+    <h2 class="text-xl font-bold text-center">¿Por qué nosotros?</h2>
+
+    <div>
+      {
+        motives.map((service) => {
+          return (
+            <div class="items-center service-container my-4 px-4">
+                <h3 class="text-lg font-bold">{service.title}</h3>
+                <p class="text-md"> {service.text}</p>
+            </div>
+          )
+        })
+      }
+    </div>
+
     <div class="flex gap-4 pt-3 items-center">
-
-      <p class="flex flex-col">
+      <p class="flex flex-col px-4">
         <ContactBtn/>
       </p>
     </div>
+
   </div>
+
   <div>
-    <img src="public/assets/generic.jpg" alt="">
+    <img src="public/assets/consulting_room.jpg" alt="" class="rounded-xl m-4">
   </div>
+
 </section>

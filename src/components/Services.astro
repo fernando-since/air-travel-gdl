@@ -1,29 +1,73 @@
 ---
 const services = [
 	{
-		title: 'Service 1',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Exámenes y limpiezas',
+		text: 'Revisiones periódicas para evaluar la salud bucal, eliminar la placa y el sarro, y prevenir problemas futuros.',
+		icon: 'dental_hygiene.svg'
 	},
 	{
-		title: 'Service 2',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Endodoncia',
+		text: 'Tratamientos de conducto para salvar dientes infectados o dañados en su pulpa. Evita perder tus dientes.',
+		icon: 'tooth.svg'
 	},
 	{
-		title: 'Service 3',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Cirugía oral',
+		text: 'Procedimientos quirúrgicos como extracción de muelas del juicio, cirugía de encías y colocación de implantes.',
+		icon: 'surgical.svg'
 	},
 ]
 ---
 
-<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between mb-48">
+
+
+<section id="servicios" class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[200px] justify-between mb-48">
   {
     services.map((service) => {
       return (
-        <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
-          <h3 class="text-lg font-bold">{service.title}</h3>
-          <p class="text-md"> {service.text}</p>
+        <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5 service-container">
+			<div class="icon-container">
+				<img src={`/public/icons/` + service.icon } alt="" style="color: white;">
+			</div>
+          	<h3 class="text-lg font-bold text-center">{service.title}</h3>
+          	<p class="text-md text-center"> {service.text}</p>
         </div>
       )
     })
   }
 </section>
+
+
+
+<style>
+	.icon-container {
+		width: 100px;
+		height: 95px;
+		display: inline-block;
+		line-height: 95px;
+		margin: 20px 0 30px 0;
+		border-radius: 62% 31% 48%;
+		text-align: center;
+		background: #f0f5ff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 23% 45% 42% 43%;
+		
+	}
+		.icon-container:hover {
+			background-color: var(--color-primary);
+			transform: scale(1.04);
+			transition: all 0.475s;
+			cursor: pointer;
+		}
+
+
+	.service-container {
+		padding: 14px;
+		border: 1px solid #f1f1f100;
+	}
+		.service-container:hover{
+			border-radius: 40px;
+			border: 1px solid #ececec;
+		}
+</style>

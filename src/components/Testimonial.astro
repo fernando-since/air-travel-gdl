@@ -1,0 +1,138 @@
+---
+import { Image } from "astro:assets";
+
+const testimonials = [
+  {
+    name: "Juan Carlos",
+    opinion: '"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quae quos exercitationem voluptate temporibus aperiam reiciendis pariatur quis non cupiditate"',
+    image: "frame1.svg",
+    icon: "avatar1.svg",
+  },
+  {
+    name: "Pepe chuy",
+    opinion: '"Lorem, ipsum dolor sit amet consectetur adipisici ndolor sit amet consectetur adipisicing elit. Doloremque us aperiam reiciendis pariatur quis non cupiditate"',
+    image: "frame1.svg",
+    icon: "avatar2.svg",
+  },
+  {
+    name: "Lorena mendoza",
+    opinion: '"Lorem, ipsum quae quos exercitationem voluptate temporibus aperiam reiciendis pariatur quis non cupiditate"',
+    image: "frame1.svg",
+    icon: "avatar3.svg",
+  },
+]
+
+
+---
+
+<h2 class="text-xl font-bold text-center mt-48 mb-10" id="testimonios">Testimonios</h2>
+
+{
+        <section class={`section ${"bg-theme-light"}`}>
+          <div class="container">
+            <div class=" gap-8 md:grid md:grid-cols-2">
+              <div class={`service-carousel ${ "md:order-1"}`}>
+                {(
+                  <div class="swiper" style="min-height: 60vh;">
+                    <div class="swiper-wrapper" style="min-height: 60vh;">
+                      {testimonials?.map((testimonial: any) => (
+
+                        <div class="swiper-slide">
+                            <img src={`/public/assets/` + testimonial.image } alt="" class="absolute">
+                            
+                            <div class="comment-container">
+                              <div>
+                                <img src={`/public/icons/` + testimonial.icon } alt="" class="w-[60px] m-4">
+                              </div>
+                              <div class="text-[var(--heading-1)]">
+                                <p>{testimonial.opinion}</p>
+                                <p class="font-bold mt-4">{testimonial.name}</p>
+                              </div>
+                            </div>
+                        </div>
+
+                      ))}
+                    </div>
+                    <div class="pagination" />
+                  </div>
+                )}
+              </div>
+
+              <div
+                class={`service-content mt-10 p-10  ${ "md:order-2"}`}
+              >
+                <h2 class="font-bold text-lg">Conoce algunas opiniones</h2>
+                <p class="mt-4 mb-2 text-sm">Nos importa profundamente lo que piensan nuestros pacientes. Creemos que cada opinión cuenta y nos esforzamos por escuchar y aprender de sus experiencias. Tu comentario es invaluable para nosotros y nos ayuda a mejorar continuamente nuestros servicios para brindarte la mejor atención posible.</p>
+
+                <p class="text-sm text-[color:var(--text-color)]  mt-8">
+                  <span class="font-bold">
+                    ¡En <span class="text-[color:var(--color-primary)] text-transparent bg-clip-text bg-gradient-to-br from-20% via-primary via-80%">Dental Integral</span> tu opinión nos importa! 
+                  </span>
+                    Dejanosla en nuestras redes sociales.
+                </p>
+
+                <div class="flex ">
+                    <div class="m-6">
+                        <a href="https://www.facebook.com/dental.integral.GDL" class="text-xl leading-6 text-gray-600 hover:text-gray-900">
+                            <i class="fab fa-facebook mr-2"></i></a>
+                    </div>
+                    <div class=" mt-6">
+                      <a href="https://www.instagram.com/consultoriodentalintegral.cdi/" class="text-xl leading-6 text-gray-600 hover:text-gray-900">
+                            <i class="fab fa-instagram mr-2"></i></a>
+                    </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+  }
+
+
+
+<script>
+    import { Swiper } from "swiper";
+    import "swiper/css";
+    import "swiper/css/pagination";
+    import { Autoplay, Pagination } from "swiper/modules";
+
+    // astro:page-load event is fired when the page is loaded
+    document.addEventListener("astro:page-load", () => {
+      new Swiper(".service-carousel .swiper", {
+        modules: [Pagination, Autoplay],
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          type: "bullets",
+          el: ".service-carousel .pagination",
+          clickable: true,
+        },
+      });
+    });
+  </script>
+
+
+
+
+<style>
+
+  .comment-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20%;
+    padding: 15px;
+    min-width: 300px;
+    width: min-content;
+    background: #ffffff;
+    position: relative;
+    border-radius: 20px;
+    z-index: 999;
+    box-shadow: 1px 1px 2px 0px rgb(203, 203, 203);
+  }
+</style>
