@@ -26,7 +26,7 @@ const services = [
       return (
         <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5 service-container">
 			<div class="icon-container">
-				<img src={`/public/icons/` + service.icon } alt="" style="color: white;">
+				<img src={`/icons/` + service.icon } alt="" style="color: white;">
 			</div>
           	<h3 class="text-lg font-bold text-center">{service.title}</h3>
           	<p class="text-md text-center"> {service.text}</p>
@@ -70,4 +70,12 @@ const services = [
 			border-radius: 40px;
 			border: 1px solid #ececec;
 		}
+
+
+@media only screen and (max-width: 720px) {
+	#servicios {
+		padding: 0px;
+	}
+}
+
 </style>

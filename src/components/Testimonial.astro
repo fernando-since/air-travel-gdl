@@ -33,16 +33,16 @@ const testimonials = [
             <div class=" gap-8 md:grid md:grid-cols-2">
               <div class={`service-carousel ${ "md:order-1"}`}>
                 {(
-                  <div class="swiper" style="min-height: 60vh;">
-                    <div class="swiper-wrapper" style="min-height: 60vh;">
+                  <div class="swiper special-height">
+                    <div class="swiper-wrapper special-height">
                       {testimonials?.map((testimonial: any) => (
 
                         <div class="swiper-slide">
-                            <img src={`/public/assets/` + testimonial.image } alt="" class="absolute">
+                            <img src={`/assets/` + testimonial.image } alt="" class="absolute">
                             
                             <div class="comment-container">
                               <div>
-                                <img src={`/public/icons/` + testimonial.icon } alt="" class="w-[60px] m-4">
+                                <img src={`/icons/` + testimonial.icon } alt="" class="w-[60px] m-4">
                               </div>
                               <div class="text-[var(--heading-1)]">
                                 <p>{testimonial.opinion}</p>
@@ -133,6 +133,21 @@ const testimonials = [
     position: relative;
     border-radius: 20px;
     z-index: 999;
-    box-shadow: 1px 1px 2px 0px rgb(203, 203, 203);
+    box-shadow: 2px 1px 5px 0px rgb(215 215 215);
   }
+
+  .special-height {
+    min-height: 60vh;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    .special-height {
+      min-height: 40vh;
+    }
+    .service-content {
+      padding: 5px;
+    }
+  }
+
+
 </style>

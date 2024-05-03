@@ -1,8 +1,10 @@
 # build output
 dist/
+.firebase/
 
 # generated types
 .astro/
+
 
 # dependencies
 node_modules/

@@ -48,7 +48,7 @@ const { open } = Astro.props;
 		{
 			questions.map((e: any, i: any) => {
 				return (
-					<div class=" border-b-[1px]" style="width: 100%;">
+					<div class="p-2 border-b-[1px]" style="width: 100%;">
 						<header
 							class="flex justify-between cursor-pointer [&>*]:pointer-events-none opacity-85 hover:opacity-100"
 							data-status={`${i === open ? "enabled" : "disabled"}`}
@@ -61,7 +61,7 @@ const { open } = Astro.props;
 							<img
 								style="max-width: 40px;"
 								class="w-8 transition-[rotate]"
-								src="/public/icons/arrow.svg"
+								src="/icons/arrow.svg"
 								alt="arrow"
 								style={`${
 								i === open
