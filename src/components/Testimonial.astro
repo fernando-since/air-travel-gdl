@@ -3,22 +3,25 @@ import { Image } from "astro:assets";
 
 const testimonials = [
   {
-    name: "Juan Carlos",
-    opinion: '"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quae quos exercitationem voluptate temporibus aperiam reiciendis pariatur quis non cupiditate"',
+    name: "Daynet Castañeda Rodríguez",
+    opinion: '"Gracias por la atención en la última consulta!!!!! Excelente servicio, amabilidad y sobre todo paciencia."',
     image: "frame1.svg",
     icon: "avatar1.svg",
+    link: "https://www.facebook.com/photo/?fbid=867504667810796&set=pb.100036538130309.-2207520000",
   },
   {
-    name: "Pepe chuy",
-    opinion: '"Lorem, ipsum dolor sit amet consectetur adipisici ndolor sit amet consectetur adipisicing elit. Doloremque us aperiam reiciendis pariatur quis non cupiditate"',
+    name: "Oscar Reyes",
+    opinion: '"Excelente!!muy profesional y atento👍"',
     image: "frame1.svg",
     icon: "avatar2.svg",
+    link: "https://www.facebook.com/photo/?fbid=1748260541981759&set=pb.100036538130309.-2207520000",
   },
   {
-    name: "Lorena mendoza",
-    opinion: '"Lorem, ipsum quae quos exercitationem voluptate temporibus aperiam reiciendis pariatur quis non cupiditate"',
+    name: "Laura VeBe",
+    opinion: '"Una hermosa y rápida extracción. Cero dolor!"',
     image: "frame1.svg",
     icon: "avatar3.svg",
+    link: "https://www.facebook.com/photo/?fbid=1437018229772660&set=pb.100036538130309.-2207520000",
   },
 ]
 
@@ -31,7 +34,7 @@ const testimonials = [
         <section class={`section ${"bg-theme-light"}`}>
           <div class="container">
             <div class=" gap-8 md:grid md:grid-cols-2">
-              <div class={`service-carousel ${ "md:order-1"}`}>
+              <div data-aos="fade-right" class={`service-carousel ${ "md:order-1"}`}>
                 {(
                   <div class="swiper special-height">
                     <div class="swiper-wrapper special-height">
@@ -46,7 +49,7 @@ const testimonials = [
                               </div>
                               <div class="text-[var(--heading-1)]">
                                 <p>{testimonial.opinion}</p>
-                                <p class="font-bold mt-4">{testimonial.name}</p>
+                                <a href={testimonial.link}><p class="font-bold mt-4">{testimonial.name}</p></a>
                               </div>
                             </div>
                         </div>
@@ -66,7 +69,7 @@ const testimonials = [
 
                 <p class="text-sm text-[color:var(--text-color)]  mt-8">
                   <span class="font-bold">
-                    ¡En <span class="text-[color:var(--color-primary)] text-transparent bg-clip-text bg-gradient-to-br from-20% via-primary via-80%">Dental Integral</span> tu opinión nos importa! 
+                    ¡En <span class="text-[color:var(--color-primary)] bg-clip-text bg-gradient-to-br from-20% via-primary via-50%">Dental Integral</span> tu opinión nos importa! 
                   </span>
                     Dejanosla en nuestras redes sociales.
                 </p>

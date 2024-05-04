@@ -1,0 +1,41 @@
+---
+import ContactBtn from "./ContactBtn.astro";
+
+---
+
+<!-- CONTACT US -->
+<div class="contact-us">
+    <div class="text-container">
+        <p class="text-lg font-bold" data-translate="CONTACT_CONTIZATION">Contactanos y agenda tu cita</p>
+        <p class="text-sm" data-translate="CONTACT_WHATSAPP">Cualquier duda mandanos mensaje por Whatsapp.</p>
+    </div>
+    <ContactBtn/>
+</div>
+
+
+
+<style>
+    .contact-us {
+        margin: 180px 0px 200px 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        .text-container {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 100px;
+        }
+
+
+    @media only screen and (max-width: 1024px) {
+        .text-container {
+            margin: 20px;
+            padding: 2px;
+            text-align: center;
+        }
+    }
+  </style>

@@ -24,7 +24,7 @@ const services = [
   {
     services.map((service) => {
       return (
-        <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5 service-container">
+        <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5 service-container" data-aos="zoom-in">
 			<div class="icon-container">
 				<img src={`/icons/` + service.icon } alt="" style="color: white;">
 			</div>
@@ -68,7 +68,7 @@ const services = [
 	}
 		.service-container:hover{
 			border-radius: 40px;
-			border: 1px solid #ececec;
+			border: 1px solid #dbdbdb;
 		}
 
 
