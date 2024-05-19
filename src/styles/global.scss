@@ -1,9 +1,9 @@
 :root {
     --color-bg: rgb(255, 255, 255);
     --color-bg-opuesto: rgb(4 8 20);
-    --color-primary: #3eb6d5;
-    --color-secondary: #1895b5;
-    --color-tertiary: #569ee3;
+    --color-primary: #E2211A;
+    --color-secondary: #E2621A;
+    --color-tertiary: #a80600;
     --text-color: #2c2c2c;
 
     --color-border:rgb(255 255 255);
@@ -17,25 +17,11 @@
 }
 
 
-.dark {
-    --text-color: #fafafa;
-    --color-bg: rgb(22 22 22);
-    --color-bg-opuesto: #fafafa;
-    
-    --color-box:  rgb(17 24 39);
-    --box-border: rgb(243 244 246/0.1);
-    --box-sd:     #00000000;	
-    --heading-1:  #000000;	
-    --heading-2:  #1a1a1a;	
-    --heading-3:  #323232;
-    
-}
-
 html{
     scroll-behavior: smooth;
 
     // this colors are for themes
-	background: var(--color-bg);
+	  background: var(--color-bg);
     color: var(--text-color);
 }
 
