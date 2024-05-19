@@ -1,32 +1,32 @@
 ---
 const services = [
 	{
-		title: 'Exámenes y limpiezas',
-		text: 'Revisiones periódicas para evaluar la salud bucal, eliminar la placa y el sarro, y prevenir problemas futuros.',
-		icon: 'dental_hygiene.svg'
+		title: 'Igualado de pintura',
+		text: 'Nuestro equipo de expertos en pintura está capacitado para igualar con  precisión el color de la pintura de tu vehículo. Restauran su apariencia original.',
+		icon: 'tray.png'
 	},
 	{
-		title: 'Endodoncia',
-		text: 'Tratamientos de conducto para salvar dientes infectados o dañados en su pulpa. Evita perder tus dientes.',
-		icon: 'tooth.svg'
+		title: 'Productos de detallado automotriz',
+		text: 'Ofrecemos una amplia gama de productos para ayudarte a mantener tu vehículo en óptimas y las mejores condiciones.',
+		icon: 'car.png'
 	},
 	{
-		title: 'Cirugía oral',
-		text: 'Procedimientos quirúrgicos como extracción de muelas del juicio, cirugía de encías y colocación de implantes.',
-		icon: 'surgical.svg'
+		title: 'Productos 3M',
+		text: 'Como líder en innovación y calidad, tenemos soluciones avanzadas que  garantizan resultados excepcionales en el cuidado y mantenimiento de tu  vehículo.',
+		icon: 'products3m.png'
 	},
 ]
 ---
 
 
 
-<section id="servicios" class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[200px] justify-between mb-48">
+<section id="servicios" class=" principal-container lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[200px] justify-between mb-48">
   {
     services.map((service) => {
       return (
         <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5 service-container" data-aos="zoom-in">
 			<div class="icon-container">
-				<img src={`/icons/` + service.icon } alt="" style="color: white;">
+				<img src={`/assets/` + service.icon } alt="" style="color: white;">
 			</div>
           	<h3 class="text-lg font-bold text-center">{service.title}</h3>
           	<p class="text-md text-center"> {service.text}</p>
@@ -52,6 +52,7 @@ const services = [
 		justify-content: center;
 		align-items: center;
 		border-radius: 23% 45% 42% 43%;
+		padding: 20px;
 		
 	}
 		.icon-container:hover {
