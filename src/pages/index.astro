@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/navbar.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
+import AboutUs from '../components/AboutUs.astro';
 import Introduction from '../components/Introduction.astro';
 import WhyUs from '../components/WhyUs.astro';
 import Satisfaction from '../components/Satisfaction.astro';
@@ -18,10 +20,16 @@ import '@fontsource-variable/onest';
 <Layout title="Bienvenido a Dental Integral">
 
 	<main >
-		<div class="principal-container">
-			<Hero/>
+		<div>
+			<div
+			class="w-full h-screen bg-cover bg-local bg-no-repeat bg-custom-position"
+  			style="background-image: url('public/assets/worker-spraying.png');"
+			>
+				<NavBar/>
+				<Hero/>
+			</div>
 			<Services/>
-			<!-- <WhyUs/> -->
+			<AboutUs/>
 			<Introduction/>
 			<Satisfaction/>
 			<Testimonial/>
@@ -46,10 +54,15 @@ import '@fontsource-variable/onest';
 		display: flex;
 		justify-content: center;
 	}
-		.principal-container {
-			padding: 1rem 8rem;
-		}
 
+	.principal-container {
+		padding: 1rem 8rem;
+	}
+
+	.bg-custom-position {
+		background-size: 115%;
+		background-position: center calc(100% + 130px);
+	}
 	
 	@media only screen and (min-width: 1920px) {
 		.principal-container {

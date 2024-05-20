@@ -1,5 +1,5 @@
 ---
-
+import ContactBtn from "./ContactBtn.astro";
 ---
 
 <div>
@@ -13,34 +13,25 @@
 		<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="/" class="-m-1.5 p-1.5 flex items-center justify-center">
-                    <div class="p-2 bg-white rounded-full">
+                    <!-- <div class="p-2 bg-white rounded-full">
                         <img class="h-8 w-auto " src="/logo.png" alt="">
-                    </div>
-                    <span class="ml-1 text-xl navbar-title">Dental Integral</span>
+                    </div> -->
+                    <span class="ml-1 text-xl navbar-title text-white">Color Explosión</span>
                 </a>
             </div>
 
             <!-- ELEMENTS -->
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="/" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_WE_OFFER">Inicio</a>
-                <a href="#servicios" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_TESTIMONIAL">Servicios</a>
-                <a href="#nosotros" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_PROJECTS">Nosotros</a>
-                <a href="#testimonios" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)]" data-translate="LAYOUT_CONTACT">Testimonios</a>
+                <a href="/" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)] text-white" data-translate="LAYOUT_WE_OFFER">Inicio</a>
+                <a href="#servicios" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_TESTIMONIAL">Servicios</a>
+                <a href="#nosotros" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_PROJECTS">Nosotros</a>
+                <a href="#visitanos" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_CONTACT">Visitanos</a>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 ml-12">
+                <ContactBtn/>
             </div>
 
             <div class="flex justify-center items-center">
-    
-                <!-- MODE LIGTH / DARK -->
-                <button data-switch-theme class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border color-bg mx-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:flex hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                    </svg>
-                    <span class="sr-only">switch theme</span>
-                </button>
-    
                 <div id="openNavBar" class="flex lg:hidden">
                     <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Open main menu</span>
@@ -61,8 +52,8 @@
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-container">
                 <div class="flex items-center justify-between">
                     <a href="/" class="close-nav-bar -m-1.5 p-1.5 flex items-center justify-center">
-                        <img class="h-8 w-auto" src="/logo.png" alt="">
-                        <span class="ml-1 text-xl">Dental Integral</span>
+                        <!-- <img class="h-8 w-auto" src="/logo.png" alt=""> -->
+                        <span class="ml-1 text-xl text-white">Color Explosión</span>
                     </a>
                     <button type="button" class="close-nav-bar -m-2.5 rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Close menu</span>
@@ -83,10 +74,10 @@
                             hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_TESTIMONIAL">Servicios</a>
                         <a href="/#nosostros"
                             class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_PROJECTS">nosotros</a>
-                        <a href="/#testimonios"
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_PROJECTS">Nosotros</a>
+                        <a href="/#visitanos"
                             class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_CONTACT">testimonios</a>
+                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_CONTACT">Visitanos</a>
                         </div>
                     </div>
                 </div>
@@ -106,46 +97,6 @@
 
 <!-- CHANGE MODE THEME -->
 <script>
-    const switchTheme = document.querySelector(
-      "[data-switch-theme]"
-    ) as HTMLButtonElement;
-
-    if (
-      localStorage.getItem("appTheme") === "dark" ||
-      (!("appTheme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    if (switchTheme) {
-      switchTheme.addEventListener("click", (e) => {
-        e.preventDefault();
-        const doc = document.documentElement;
-        if (doc) {
-          if (localStorage.getItem("appTheme")) {
-            if (localStorage.getItem("appTheme") === "light") {
-              doc.classList.add("dark");
-              localStorage.setItem("appTheme", "dark");
-            } else {
-              document.documentElement.classList.remove("dark");
-              localStorage.setItem("appTheme", "light");
-            }
-          } else {
-            if (doc.classList.contains("dark")) {
-              doc.classList.remove("dark");
-              localStorage.setItem("appTheme", "light");
-            } else {
-              doc.classList.add("dark");
-              localStorage.setItem("appTheme", "dark");
-            }
-          }
-        }
-      });
-    }
-
 
     // Navbar
     const closeNavBar = document.getElementsByClassName('close-nav-bar')!;
