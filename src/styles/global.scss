@@ -29,14 +29,6 @@ html{
     color: var(--color-bg-opuesto);
 }
 
-
-
-
-
-
-
-
-
 // COOL BUTTON
 
 .button {
@@ -45,8 +37,8 @@ html{
     height: 3rem;
     margin: 25px 0;
     padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: var(--text-color);
+    border-radius: 0.5rem;
+    background: var(--color-primary);
     background-size: 400%;
     color: var(--color-bg);
     border: none;
@@ -80,8 +72,8 @@ html{
     border-radius: inherit;
     background: linear-gradient(
       82.3deg,
-      #1193b4 10.8%,
-      #3eb6d5 94.3%
+      #a80600 10.8%,
+      #E2621A 94.3%
     );
     transition: all 0.475s;
   }

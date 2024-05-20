@@ -1,18 +1,14 @@
 [
 	{
-		"title": "¿Cómo puedo programar una cita?",
-		"description": "Puedes programar una cita llamando a nuestro consultorio o agendandon una cita por WhatsApp"
+		"title": "¿Qué tipo de pintura debo usar para mi vehículo?",
+		"description": "La pintura adecuada para tu vehículo dependerá del acabado que desees  lograr (como sólido, metálico, perlado o mate), del color original de tu  vehículo y de su uso (si es personal o comercial). Estos factores  influyen en la elección de una pintura que se adapte tanto estéticamente  como funcionalmente a tus necesidades y preferencias."
 	},
 	{
-		"title": "¿Qué servicios de odontología estética ofrecen y cuáles son los costos aproximados?",
-		"description": "Ofrecemos una amplia gama de tratamientos, incluyendo blanqueamiento dental para aclarar y rejuvenecer tu sonrisa, carillas dentales para corregir imperfecciones estéticas, ortodoncia estética para alinear los dientes de manera discreta y restauraciones dentales para recuperar la forma y función de los dientes dañados."
+		"title": "¿Cuál es la vida útil de los productos y cómo debo almacenarlos adecuadamente?",
+		"description": "En general, los productos automotrices suelen tener una vida útil de  varios años si se almacenan correctamente en un lugar fresco, seco y  alejado de la luz solar directa. Es importante mantener los productos  bien cerrados y protegidos de la humedad para preservar su calidad y  efectividad a lo largo del tiempo."
 	},
 	{
-		"title": "¿Qué debo hacer para mantener una buena salud bucal entre las visitas al consultorio?",
-		"description": "Recomendamos cepillar tus dientes al menos dos veces al día con un cepillo de dientes suave y pasta dental con fluoruro, usar hilo dental diariamente para eliminar la placa entre los dientes y visitar al dentista regularmente para exámenes de rutina y limpiezas profesionales. Además, evita el consumo excesivo de alimentos y bebidas azucaradas, y adopta hábitos saludables como dejar de fumar para mantener una sonrisa vibrante y duradera."
-	},
-	{
-		"title": "¿Qué protocolos de esterilización y seguridad siguen en el consultorio?",
-		"description": "En nuestro consultorio dental, seguimos rigurosos protocolos de esterilización y seguridad recomendados por las autoridades sanitarias. Utilizamos equipos y técnicas de esterilización avanzados para garantizar que todas las herramientas, superficies y áreas de tratamiento estén completamente desinfectadas. Tu salud y seguridad son nuestra máxima prioridad."
+		"title": "¿Ofrecen servicios de mezcla de pinturas a medida?",
+		"description": "Respuesta"
 	}
 ]
