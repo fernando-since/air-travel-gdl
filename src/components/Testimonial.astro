@@ -31,7 +31,7 @@ const testimonials = [
 <h2 class="text-xl font-bold text-center mt-48 mb-10" id="testimonios">Testimonios</h2>
 
 {
-        <section class={`section principal-container ${"bg-theme-light"}`}>
+        <section class={`section principal-container ${"bg-theme-light"}`} style="max-width:none;">
           <div class="container">
             <div class=" gap-8 md:grid md:grid-cols-2" style="max-width:100vw;">
               <div data-aos="fade-right" class={`service-carousel ${ "md:order-1"}`}>
@@ -41,7 +41,7 @@ const testimonials = [
                       {testimonials?.map((testimonial: any) => (
 
                         <div class="swiper-slide">
-                            <img src={`/assets/` + testimonial.image } alt="" class="absolute">
+                            {/* <img src={`/assets/` + testimonial.image } alt="" class="absolute"> */}
                             
                             <div class="comment-container">
                               <div>
@@ -52,6 +52,7 @@ const testimonials = [
                                 <a href={testimonial.link}><p class="font-bold mt-4">{testimonial.name}</p></a>
                               </div>
                             </div>
+                            
                         </div>
 
                       ))}

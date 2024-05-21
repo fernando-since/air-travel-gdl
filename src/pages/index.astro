@@ -18,17 +18,12 @@ import '@fontsource-variable/onest';
 
 <Layout title="Bienvenido a Dental Integral">
 
-	<main >
-		<div>
-			<div
-				class="w-full h-screen bg-cover bg-local bg-no-repeat bg-custom-position"
-				style="background-image: url('public/assets/worker-spraying.png');"
-			>
-				<NavBar/>
-				<Hero/>
-			</div>
+	<main>
+		<div class="flex justify-center flex-col">
+
 			<Services/>
 			<AboutUs/>
+			<WhyUs/>
 			<Satisfaction/>
 			<Testimonial/>
 			<FrecuentQuestions/>
@@ -64,7 +59,7 @@ import '@fontsource-variable/onest';
 	
 	@media only screen and (min-width: 1920px) {
 		.principal-container {
-			max-width: 1920px;
+			padding: 0 2vw;
 		}
 	}
 

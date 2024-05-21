@@ -2,18 +2,21 @@
 <section id="porque-nostros" class="justify-center items-center bg-rect">
     <div class="flex flex-col gap-4 items-center lg:items-start py-6">
   
-        <div class="p-20">
+        <div class="p-20 text-container">
             <h2 class="text-xl font-bold">¿Por qué nosotros?</h2>
             <p class="mt-10">Con años de experiencia en el sector automotriz, Color Explosion puede  diferenciarse por su profundo conocimiento del mercado, su atención  personalizada y su capacidad para adaptarse a las necesidades cambiantes  de sus clientes y del sector en general.</p>
         </div>
   
-        <div class="flex gap-4 items-center imgs-container">
-            <div>
-                <img src="/assets/store.jpg" style="max-width: 500px;">
+        <div class="gap-4 items-center imgs-container">
+            <div class="img-cont">
+                <img src="/assets/store.jpeg" class="image">
             </div>
 
-            <div class="px-10">
-                <img src="/assets/paint_can.jpg"  style="max-width: 500px;" alt="">
+            <div class="px-10 img-cont">
+                <video width="500" height="340" controls style="border-radius:15px;">
+                    <source src="/assets/store_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
                 <p class="pt-10 max-w-[500px]">Color Explosion ofrece productos de alta calidad y tecnología avanzada  que han sido probados y respaldados por años de experiencia en el  mercado automotriz.</p>
             </div>
         </div>
@@ -27,25 +30,80 @@
         width: 100%;
         height: 50vh;
         background-color: #EFEEEE;
-        /* position: absolute;
-        z-index: 20; */
-        /* left: 0px; */
+        margin-bottom: 40vh;
+        margin-top: 100px;
     }
-
-    /* #porque-nostros {
-        z-index: 999;
-    } */
 
     .imgs-container {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: start;
+    }
+    .image {
+        max-width: 500px;
+        border-radius: 15px;
     }
 
+
+    @media only screen and (min-width: 1920px) {
+		.text-container {
+            max-width: 48vw;
+            margin-left: 18%;
+        }
+	}
+
+    @media only screen and (max-width: 1919px) {
+		.text-container {
+            max-width: 750px;
+            margin-left: 12%;
+        }
+	}
+
+    @media only screen and (max-width: 1450px) {
+		.text-container {
+            max-width: 750px;
+        }
+	}
+
+	@media only screen and (max-width: 1150px) {
+		.text-container {
+            margin-left: 8%;
+        }
+        .imgs-container {
+            flex-direction: column;
+        }
+        .img-cont {
+            margin: auto;
+        }
+        .bg-rect {
+            margin-bottom: 75vh;
+        }
+	}
+
+	@media only screen and (max-width: 720px) {
+		.text-container {
+            max-width: 750px;
+        }
+        .image {
+            max-width: 330px;
+            border-radius: 10px;
+        }
+        .bg-rect {
+            height: 80vh;
+            margin-bottom: 32vh;
+        }
+	}
+    
+	@media only screen and (max-width: 550px) {
+        .text-container {
+            max-width: 94%;
+        }
+        .img-cont {
+            max-width: 90%;
+        }
+        .bg-rect {
+            height: 80vh;
+        }
+	}
 </style>
-
-
-
-<br><br><br><b><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><b><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><b><br><br><br><br>
