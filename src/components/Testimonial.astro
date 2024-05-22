@@ -8,6 +8,7 @@ const testimonials = [
     image: "frame1.svg",
     icon: "avatar2.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
+    blurClasses: ['circle1', 'circle2']
   },
   {
     name: "Luis Ulises",
@@ -15,6 +16,7 @@ const testimonials = [
     image: "frame1.svg",
     icon: "avatar3.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
+    blurClasses: ['circle3', 'circle4']
   },
   {
     name: "Hugo Robert Duran",
@@ -22,6 +24,7 @@ const testimonials = [
     image: "frame1.svg",
     icon: "avatar1.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
+    blurClasses: ['circle5', 'circle6']
   },
 ]
 
@@ -43,11 +46,11 @@ const testimonials = [
                         <div class="swiper-slide">
                             {/* <img src={`/assets/` + testimonial.image } alt="" class="absolute"> */}
                             
-                            <div class="circle-blur">
+                            <div class={testimonial.blurClasses[0]}>
                               <div class="cb-part1"></div>
                               <div class="cb-part2"></div>
                             </div>
-                            <div class="circle-blur2">
+                            <div class={testimonial.blurClasses[1]}>
                               <div class="cb-part1"></div>
                               <div class="cb-part2"></div>
                             </div>
@@ -183,16 +186,35 @@ const testimonials = [
 
 
 
-
-  .circle-blur {
+  .circle1 {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+  }
+  .circle2 {
+    position: absolute;
+    top: 200px;
+    left: 240px;
+  }
+  .circle3 {
     position: absolute;
     top: 50px;
     left: 78px;
   }
-  .circle-blur2 {
+  .circle4 {
     position: absolute;
     top: 190px;
-    left: 240px;
+    left: 270px;
+  }
+  .circle5 {
+    position: absolute;
+    top: 50px;
+    right: 178px;
+  }
+  .circle6 {
+    position: absolute;
+    top: 190px;
+    left: 140px;
   }
     .cb-part1{
       width: 50px;
@@ -207,7 +229,7 @@ const testimonials = [
       width: 50px;
       height: 50px;
       position: relative;
-      background: var(--color-primary);
+      background: #ff0800;
       z-index: 100;
       filter: blur(50px);
     }
