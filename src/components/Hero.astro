@@ -1,19 +1,19 @@
 <section
-  class="place-items-center pt-16 pb-8 md:pt-12 md:pb-24 section-hero">
-  <div class="flex flex-col md:flex-row justify-between items-center min-h-screen p-4 md:p-8">
-    <div class="card-left p-4 ml-28 mb-80 bg-black bg-opacity-20 backdrop-blur-[2px] text-white content-center rounded-md">
-      <div class="flex items-center space-x-2">
-        <p class="text-6xl font-bold">COLOR</p>
-        <img src="/public/assets/logos/logo_blanco.svg" alt="Logo" class="sm:h-10 md:h-24 w-auto relative sm:-translate-y-2 md:-translate-y-8">
+  class="place-items-center pt-24 pb-24 lg:pt-12 lg:pb-24 section-hero">
+  <div class="flex flex-col lg:flex-row justify-between items-center lg:min-h-screen lg:p-8">
+    <div class="card-left grid justify-center p-5 mb-10 lg:ml-28 lg:mb-80 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
+      <div class="flex items-center lg:space-x-2">
+        <p class="text-5xl md:text-7xl lg:text-6xl font-bold">COLOR</p>
+        <img src="/public/assets/logos/logo_blanco.svg" alt="Logo" class="icon-img">
       </div>
-      <p class="text-6xl font-bold sm:-mt-2 md:-mt-6">EXPLOSIÓN</p>
-      <p class="text-3xl font-light">Sucursal 5 de febrero #1085</p>
+      <p class="flex -mt-2 lg:-mt-6 text-5xl md:text-7xl lg:text-6xl font-bold">EXPLOSIÓN</p>
+      <p class="flex font-light text-lg md:text-4xl lg:text-3xl">Sucursal 5 de febrero #1085</p>
     </div>
 
-    <div class="card-right mb-80 p-10 bg-black bg-opacity-20 backdrop-blur-[2px] text-white content-center rounded-md">
-      <p class="text-3xl font-semibold">Ofrecemos una amplia gama de productos 3M.</p>
-      <hr class="my-10 border-stone-300" />
-      <p class="text-2xl p-2">Desde línea de estética automotriz, hasta complementos especializados para  el laminero, pintor y detallador automotriz. </p>
+    <div class="card-right lg:mb-80 p-5 md:p-8 lg:p-10 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
+      <p class="text-xl md:text-4xl lg:text-3xl font-semibold">Ofrecemos una amplia gama de productos 3M.</p>
+      <hr class="my-6 md:my-11 lg:my-10 border-stone-300"/>
+      <p class="text-lg lg:text-2xl p-2">Desde línea de estética automotriz, hasta complementos especializados para  el laminero, pintor y detallador automotriz. </p>
     </div>
   </div>
 </section>
@@ -31,13 +31,91 @@
     height: 405px;
   }
 
-  @media (min-width: 768px) {
+  .icon-img {
+    height: 6rem;
+    width: auto;
+    --tw-translate-y: -2rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px) {
     .card-left {
-      width: 60%;
+      width: 100%;
+      max-width: 40%;
+      height: 275px;
     }
 
     .card-right {
-      width: 35%;
+      width: 100%;
+      max-width: 40%;
+      height: 505px;
     }
   }
+
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .card-left {
+      width: 100%;
+      max-width: 70%;
+      height: 375px;
+    }
+
+    .card-right {
+      width: 100%;
+      max-width: 70%;
+      height: 405px;
+    }
+
+    .icon-img {
+      height: 6rem;
+      width: auto;
+      --tw-translate-y: -1rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+  }
+
+  /* Media Query for low resolution  Tablets, Ipads */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .card-left {
+      width: 100%;
+      max-width: 80%;
+      height: 275px;
+    }
+
+    .card-right {
+      width: 100%;
+      max-width: 80%;
+      height: 305px;
+    }
+
+    .icon-img {
+      height: 4rem;
+      width: auto;
+      --tw-translate-y: -1rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+  }
+
+  /* Media Query for Mobile Devices */
+  @media only screen and (max-width: 480px) {
+    .card-left {
+      width: 100%;
+      max-width: 80%;
+      height: auto;
+    }
+
+    .card-right {
+      width: 100%;
+      max-width: 80%;
+      height: auto;
+    }
+
+    .icon-img {
+      height: 3.50rem;
+      width: auto;
+      --tw-translate-y: -0.75rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+	}
 </style>

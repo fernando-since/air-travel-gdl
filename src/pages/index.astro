@@ -49,9 +49,14 @@ import '@fontsource-variable/onest';
 		font-family: 'Onest Variable', sans-serif;
 	}
 
+	body {
+		overflow-x: hidden;
+	}
+
 	main {
 		display: flex;
 		justify-content: center;
+		width: 100%;
 	}
 
 	.principal-container {
@@ -69,17 +74,48 @@ import '@fontsource-variable/onest';
 		}
 	}
 
-	@media only screen and (max-width: 720px) {
-		.principal-container {
-			width: 100%;
-			padding: 50px;
+	/* Media Query for Laptops and Desktops */
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		.bg-custom-position {
+			background-size: 148%;
 		}
 	}
 
+	/* Media Query for Tablets Ipads portrait mode */
+	@media (min-width: 768px) and (max-width: 1024px) {
+		.principal-container {
+			width: 100%;
+			padding: 30px;
+		}
+
+		.bg-custom-position {
+			background-size: 295%;
+		}
+	}
+
+	/* Media Query for low resolution  Tablets, Ipads */
+	@media (min-width: 481px) and (max-width: 767px) {
+		.principal-container {
+			width: 100%;
+			padding: 10px;
+		}
+
+		.bg-custom-position {
+			background-size: 330%;
+			background-position: center calc(100% + 130px);
+		}
+	}
+
+	/* Media Query for Mobile Devices */
 	@media only screen and (max-width: 480px) {
 		.principal-container {
 			width: 100%;
 			padding: 20px;
+		}
+
+		.bg-custom-position {
+			background-size: 470%;
+			background-position: center calc(100% + 130px);
 		}
 	}
 
