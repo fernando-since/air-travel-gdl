@@ -1,17 +1,17 @@
 <section
-  class="place-items-center pt-24 pb-24 lg:pt-12 lg:pb-24 section-hero">
+  class="section-container place-items-center pb-24 lg:pt-12 lg:pb-24 section-hero">
   <div class="flex flex-col lg:flex-row justify-between items-center lg:min-h-screen lg:p-8">
     <div class="card-left grid justify-center p-5 mb-10 lg:ml-28 lg:mb-80 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
       <div class="flex items-center lg:space-x-2">
         <p class="text-5xl md:text-7xl lg:text-6xl font-bold">COLOR</p>
-        <img src="/public/assets/logos/logo_blanco.svg" alt="Logo" class="icon-img">
+        <img src="/assets/logos/logo_blanco.svg" alt="Logo" class="icon-img">
       </div>
       <p class="flex -mt-2 lg:-mt-6 text-5xl md:text-7xl lg:text-6xl font-bold">EXPLOSIÓN</p>
       <p class="flex font-light text-lg md:text-4xl lg:text-3xl">Sucursal 5 de febrero #1085</p>
     </div>
 
     <div class="card-right lg:mb-80 p-5 md:p-8 lg:p-10 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
-      <p class="text-xl md:text-4xl lg:text-3xl font-semibold">Ofrecemos una amplia gama de productos 3M.</p>
+      <p class="text-xl md:text-4xl lg:text-3xl font-semibold offer-text">Ofrecemos una amplia gama de productos 3M.</p>
       <hr class="my-6 md:my-11 lg:my-10 border-stone-300"/>
       <p class="text-lg lg:text-2xl p-2">Desde línea de estética automotriz, hasta complementos especializados para  el laminero, pintor y detallador automotriz. </p>
     </div>
@@ -19,6 +19,10 @@
 </section>
 
 <style>
+  .section-container {
+    margin-top: 6rem;
+   }
+
   .card-left {
     width: 100%;
     max-width: 30%;
@@ -116,6 +120,13 @@
       width: auto;
       --tw-translate-y: -0.75rem;
       transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    
+    .section-container {
+      margin-top: 15px !important;
+    }
+    .offer-text {
+      font-size: 22px;
     }
 	}
 </style>

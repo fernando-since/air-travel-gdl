@@ -77,3 +77,31 @@ html{
     );
     transition: all 0.475s;
   }
+
+
+
+
+
+  
+  .blur-circle {
+    position: relative;
+    top: 15px;
+    left: 10px;
+  }
+    .cb-part1{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      background: var(--color-secondary);
+      top: 50px;
+      left: 50px;
+      filter: blur(50px);
+    }
+    .cb-part2{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      background: #ff0800;
+      z-index: 100;
+      filter: blur(50px);
+    }

@@ -9,15 +9,19 @@
   
         <div class="gap-4 items-center imgs-container">
             <div class="img-cont">
-                <img src="/assets/store.jpeg" class="image">
+                <img src="/assets/store.jpeg" data-aos="zoom-in" class="image">
             </div>
 
             <div class="px-10 img-cont">
-                <video width="500" height="340" controls style="border-radius:15px;">
+                <video data-aos="zoom-in" width="500" height="340" controls style="border-radius:15px;">
                     <source src="/assets/store_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video> 
                 <p class="pt-10 max-w-[500px]">Color Explosion ofrece productos de alta calidad y tecnología avanzada  que han sido probados y respaldados por años de experiencia en el  mercado automotriz.</p>
+                <div class="blur-circle">
+                    <div class="cb-part1"></div>
+                    <div class="cb-part2"></div>
+                </div>
             </div>
         </div>
   
@@ -95,19 +99,26 @@
             margin-bottom: 68vh;
         }
 	}
-	@media only screen and (max-width: 720px) and (max-height: 1000px) {
+	@media only screen and (max-width: 720px) and (max-height: 800px) {
         .bg-rect {
             height: 80vh;
-            /* margin-bottom: 120vh; */
+        }
+	}
+    @media only screen and (max-height: 850px) {
+        .bg-rect {
+            height: 80vh;
         }
 	}
     
 	@media only screen and (max-width: 550px) {
         .text-container {
             max-width: 94%;
+            padding: 10px;
         }
         .img-cont {
             max-width: 90%;
+            padding-left: 0;
+            padding-right: 0;
         }
         .bg-rect {
             height: 80vh;
