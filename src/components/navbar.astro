@@ -3,149 +3,205 @@ import ContactBtn from "./ContactBtn.astro";
 ---
 
 <div>
-	<!-- Header -->
-	<header class=""
-        class:list={[
-            { sticky: true },
-            "absolute inset-x-0 top-0 z-50 opacity-88 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out data-aw-sticky-header",
-        ]}
+  <!-- Header -->
+  <header
+    class=""
+    class:list={[
+      { sticky: true },
+      "absolute inset-x-0 top-0 z-50 opacity-88 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out data-aw-sticky-header",
+    ]}
+  >
+    <nav
+      class="flex items-center justify-between lg:px-8"
+      style="width: 100vw;"
+      aria-label="Global"
     >
-		<nav class="flex items-center justify-between lg:px-8" style="width: 100vw;" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="/" class="-m-1.5 p-1.5 flex items-center justify-center">
-                    <div class="p-2 rounded-full">
-                        <img class="h-8 w-auto " src="/assets/logos/logo_blanco.svg" alt="Logo">
-                    </div>
-                    <span class="ml-1 text-xl navbar-title text-white">Color Explosión</span>
-                </a>
-            </div>
+      <div class="flex lg:flex-1">
+        <a href="/" class="-m-1.5 p-1.5 flex items-center justify-center">
+          <div class="p-2 rounded-full">
+            <img
+              class="h-10 w-auto"
+              src="/assets/logos/logo-icono.png"
+              alt="Logo"
+            />
+          </div>
+        </a>
+      </div>
 
-            <!-- ELEMENTS -->
-            <div class="hidden lg:flex lg:gap-x-12">
-                <a href="/" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)] text-white" data-translate="LAYOUT_WE_OFFER">Inicio</a>
-                <a href="#servicios" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_TESTIMONIAL">Servicios</a>
-                <a href="#nosotros" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_PROJECTS">Nosotros</a>
-                <a href="#visitanos" class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]" data-translate="LAYOUT_CONTACT">Visitanos</a>
-            </div>
-            <div class="hidden lg:flex flex-col gap-3 ml-12">
-                <ContactBtn/>
-            </div>
+      <!-- ELEMENTS -->
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a
+          href="/"
+          class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] active:text-[var(--color-secondary)] text-white"
+          data-translate="LAYOUT_WE_OFFER">Inicio</a
+        >
+        <a
+          href="#servicios"
+          class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]"
+          data-translate="LAYOUT_TESTIMONIAL">Servicios</a
+        >
+        <a
+          href="#nosotros"
+          class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]"
+          data-translate="LAYOUT_PROJECTS">Nosotros</a
+        >
+        <a
+          href="#visitanos"
+          class="text-md font-semibold leading-6 hover:text-[var(--color-primary)] text-white active:text-[var(--color-secondary)]"
+          data-translate="LAYOUT_CONTACT">Visitanos</a
+        >
+      </div>
+      <div class="hidden lg:flex flex-col gap-3 ml-12">
+        <ContactBtn />
+      </div>
 
-            <div class="flex justify-center items-center">
-                <div id="openNavBar" class="flex lg:hidden">
-                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                    </svg>
-                    </button>
-                </div>
+      <div class="flex justify-center items-center">
+        <div id="openNavBar" class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div id="navBar" class="hidden lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 z-50"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-container"
+      >
+        <div class="flex items-center justify-between">
+          <a
+            href="/"
+            class="close-nav-bar -m-1.5 p-1.5 flex items-center justify-center"
+          >
+            <img
+              class="h-8 w-auto"
+              src="/assets/logos/logo_blanco.svg"
+              alt=""
+            />
+            <span class="ml-1 text-xl text-white">Color Explosión</span>
+          </a>
+          <button
+            type="button"
+            class="close-nav-bar -m-2.5 rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a
+                href="/"
+                class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white"
+                data-translate="LAYOUT_WE_OFFER">Inicio</a
+              >
+              <a
+                href="/#servicios"
+                class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white"
+                data-translate="LAYOUT_TESTIMONIAL">Servicios</a
+              >
+              <a
+                href="/#nosotros"
+                class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white"
+                data-translate="LAYOUT_PROJECTS">Nosotros</a
+              >
+              <a
+                href="/#visitanos"
+                class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
+                            hover:bg-[var(--color-primary)] hover:text-white"
+                data-translate="LAYOUT_CONTACT">Visitanos</a
+              >
             </div>
-		</nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-
-		<!-- Mobile menu, show/hide based on menu open state. -->
-		<div id="navBar" class="hidden lg:hidden" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 z-50"></div>
-            <div
-                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-container">
-                <div class="flex items-center justify-between">
-                    <a href="/" class="close-nav-bar -m-1.5 p-1.5 flex items-center justify-center">
-                        <img class="h-8 w-auto" src="/assets/logos/logo_blanco.svg" alt="">
-                        <span class="ml-1 text-xl text-white">Color Explosión</span>
-                    </a>
-                    <button type="button" class="close-nav-bar -m-2.5 rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="mt-6 flow-root">
-                    <div class="-my-6 divide-y divide-gray-500/10">
-                        <div class="space-y-2 py-6">
-                        <a href="/"
-                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_WE_OFFER">Inicio</a>
-                        <a href="/#servicios"
-                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_TESTIMONIAL">Servicios</a>
-                        <a href="/#nosotros"
-                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_PROJECTS">Nosotros</a>
-                        <a href="/#visitanos"
-                            class="close-nav-bar -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-center text-[var(--text-color)]
-                            hover:bg-[var(--color-primary)] hover:text-white" data-translate="LAYOUT_CONTACT">Visitanos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</div>
-	</header>
-
-	<!-- Footer -->
-	<!-- <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <!-- Footer -->
+  <!-- <div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<Footer/>
 	</div> -->
-
 </div>
-
-
-
 
 <!-- CHANGE MODE THEME -->
 <script>
+  // Navbar
+  const closeNavBar = document.getElementsByClassName("close-nav-bar")!;
+  const openNavBar = document.getElementById("openNavBar")!;
+  const navBar = document.getElementById("navBar")!;
 
-    // Navbar
-    const closeNavBar = document.getElementsByClassName('close-nav-bar')!;
-    const openNavBar = document.getElementById('openNavBar')!;
-    const navBar = document.getElementById('navBar')!;
+  for (var i = 0; i < closeNavBar.length; i++) {
+    closeNavBar[i].addEventListener("click", toggleMenu);
+  }
+  openNavBar.addEventListener("click", toggleMenu);
 
-    for(var i = 0; i < closeNavBar.length; i++) {
-        closeNavBar[i].addEventListener('click', toggleMenu);
-    }
-    openNavBar.addEventListener('click', toggleMenu);
-
-    function toggleMenu() {
-        navBar.style.animationPlayState = 'running';
-        navBar.classList.toggle("hidden");
-    }
-
+  function toggleMenu() {
+    navBar.style.animationPlayState = "running";
+    navBar.classList.toggle("hidden");
+  }
 </script>
 
-
 <style>
-    .shadow-container { 
-        box-shadow: -22px 0px 22px -30px rgb(255 255 255 / 75%);
-        background: var(--color-bg);
+  .shadow-container {
+    box-shadow: -22px 0px 22px -30px rgb(255 255 255 / 75%);
+    background: var(--color-bg);
+  }
+
+  #navBar {
+    position: relative;
+    animation-name: showSlowly;
+    animation-duration: 1s;
+    animation-delay: 0s;
+  }
+
+  @keyframes showSlowly {
+    from {
+      opacity: 0;
     }
-
-
-    #navBar {
-        position: relative;
-        animation-name: showSlowly;
-        animation-duration: 1s;
-        animation-delay: 0s;
+    to {
+      opacity: 1;
     }
+  }
 
-        @keyframes showSlowly {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-        }
-    
-
-        @media only screen and (max-width: 1080px) { 
-            .navbar-title {
-                font-size: 18px;
-                margin-left: 10px;
-            }
-        }
-
-
+  @media only screen and (max-width: 1080px) {
+    .navbar-title {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
 </style>

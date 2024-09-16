@@ -1,123 +1,116 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import NavBar from '../components/navbar.astro';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import AboutUs from '../components/AboutUs.astro';
-import WhyUs from '../components/WhyUs.astro';
-import Satisfaction from '../components/Satisfaction.astro';
-import Footer from '../components/Footer.astro';
-import FrecuentQuestions from '../components/FrecuentQuestions.astro';
-import Testimonial from '../components/Testimonial.astro';
-import VisitUs from '../components/VisitUs.astro';
-import SimpleContact from '../components/SimpleContact.astro';
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/navbar.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import AboutUs from "../components/AboutUs.astro";
+import WhyUs from "../components/WhyUs.astro";
+import Satisfaction from "../components/Satisfaction.astro";
+import Footer from "../components/Footer.astro";
+import FrecuentQuestions from "../components/FrecuentQuestions.astro";
+import Testimonial from "../components/Testimonial.astro";
+import VisitUs from "../components/VisitUs.astro";
+import SimpleContact from "../components/SimpleContact.astro";
 
 // Supports weights 100-900
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 ---
 
 <Layout title="Bienvenido a Color Explosión">
-
-	<main>
-		<div class="flex justify-center flex-col">
-			<div
-				class="w-full h-screen bg-cover bg-local bg-no-repeat bg-custom-position"
-				style="background-image: url('/assets/worker-spraying.jpg');"
-			>
-				<NavBar/>
-				<Hero/>
-			</div>
-			<Services/>
-			<AboutUs/>
-			<WhyUs/>
-			<Satisfaction/>
-			<Testimonial/>
-			<FrecuentQuestions/>
-			<VisitUs/>
-			<SimpleContact/>
-			<Footer/>
-			
-		</div>
-	</main>
-	
+  <main>
+    <div class="flex justify-center flex-col">
+      <div
+        class="w-full h-screen bg-cover bg-local bg-no-repeat bg-custom-position"
+        style="background-image: url('/assets/image.png');"
+      >
+        <NavBar />
+        <Hero />
+      </div>
+      <Services />
+      <AboutUs />
+      <WhyUs />
+      <Satisfaction />
+      <Testimonial />
+      <FrecuentQuestions />
+      <VisitUs />
+      <SimpleContact />
+      <Footer />
+    </div>
+  </main>
 </Layout>
 
-
-
 <style is:global>
-	* {
-		font-family: 'Onest Variable', sans-serif;
-	}
+  * {
+    font-family: "Onest Variable", sans-serif;
+  }
 
-	body {
-		overflow-x: hidden;
-	}
+  body {
+    overflow-x: hidden;
+  }
 
-	main {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
+  main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-	.principal-container {
-		padding: 1rem 10rem;
-	}
+  .principal-container {
+    padding: 1rem 10rem;
+  }
 
-	.bg-custom-position {
-		background-size: 115%;
-		background-position: center calc(100% + 130px);
-	}
-	
-	@media only screen and (min-width: 1920px) {
-		.principal-container {
-			padding: 0 2vw;
-		}
-	}
+  .bg-custom-position {
+    background-size: 115%;
+    background-position: center calc(100% + 130px);
+  }
 
-	/* Media Query for Laptops and Desktops */
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		.bg-custom-position {
-			background-size: 148%;
-		}
-	}
+  @media only screen and (min-width: 1920px) {
+    .principal-container {
+      padding: 0 2vw;
+    }
+  }
 
-	/* Media Query for Tablets Ipads portrait mode */
-	@media (min-width: 768px) and (max-width: 1024px) {
-		.principal-container {
-			width: 100%;
-			padding: 30px;
-		}
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .bg-custom-position {
+      background-size: 148%;
+    }
+  }
 
-		.bg-custom-position {
-			background-size: 295%;
-		}
-	}
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .principal-container {
+      width: 100%;
+      padding: 30px;
+    }
 
-	/* Media Query for low resolution  Tablets, Ipads */
-	@media (min-width: 481px) and (max-width: 767px) {
-		.principal-container {
-			width: 100%;
-			padding: 10px;
-		}
+    .bg-custom-position {
+      background-size: 295%;
+    }
+  }
 
-		.bg-custom-position {
-			background-size: 330%;
-			background-position: center calc(100% + 130px);
-		}
-	}
+  /* Media Query for low resolution  Tablets, Ipads */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .principal-container {
+      width: 100%;
+      padding: 10px;
+    }
 
-	/* Media Query for Mobile Devices */
-	@media (min-width: 181px) and (max-width: 480px) {
-		.principal-container {
-			width: 100%;
-			padding: 5px;
-		}
+    .bg-custom-position {
+      background-size: 330%;
+      background-position: center calc(100% + 130px);
+    }
+  }
 
-		.bg-custom-position {
-			background-size: 370%;
-			background-position: center calc(100% - 100px);
-		}
-	}
+  /* Media Query for Mobile Devices */
+  @media (min-width: 181px) and (max-width: 480px) {
+    .principal-container {
+      width: 100%;
+      padding: 5px;
+    }
 
-
+    .bg-custom-position {
+      background-size: 370%;
+      background-position: center calc(100% - 100px);
+    }
+  }
 </style>

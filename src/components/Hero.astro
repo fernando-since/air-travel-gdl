@@ -1,45 +1,55 @@
+---
+import ContactBtn from "./ContactBtn.astro";
+---
+
 <section
-  class="section-container place-items-center pb-24 lg:pt-4 lg:pb-24 section-hero">
-  <div class="flex flex-col lg:flex-row justify-between items-center lg:min-h-screen lg:p-8">
-    <div class="card-left grid justify-center p-5 mb-10 lg:ml-28 lg:mb-80 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
-      <div class="flex items-center lg:space-x-2">
-        <p class="text-5xl md:text-7xl lg:text-4xl font-bold title">PINTURAS</p>
-        <img src="/assets/logos/logo_blanco.svg" alt="Logo" class="icon-img">
+  class="section-container place-items-center pb-24 lg:pt-4 lg:pb-24 section-hero"
+>
+  <div
+    class="flex flex-col lg:flex-row justify-between items-center lg:min-h-screen"
+  >
+    <div
+      class="card-left grid justify-center p-5 mb-10 lg:ml-28 lg:mb-80 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md"
+    >
+      <p
+        class="flex -mt-2 lg:-mt-6 text-3xl md:text-4xl lg:text-3xl font-bold title pb-4"
+      >
+        Nosotros hacemos el trabajo, tú solo viajas.
+      </p>
+      <div class="flex flex-wrap flex-col sm:flex-row items-center pb-4">
+        <span class="font-light text-base sm:text-sm">
+          En nuestra agencia, nos dedicamos a buscar y ofrecerte las mejores
+          tarifas para que disfrutes de tus viajes sin preocuparte por el costo.
+          ¡Deja que encontremos la mejor oferta para ti!
+        </span>
       </div>
-      <p class="flex -mt-2 lg:-mt-6 text-5xl md:text-7xl lg:text-4xl font-bold title">COLOR EXPLOSIÓN</p>
-      <div class="flex flex-wrap flex-col sm:flex-row items-center">
-        <span class="font-light text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-          Sucursal 5 de febrero #1085
-        </span>
-        <span class="flex items-center font-light text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-3xl mt-2 sm:mt-0 sm:ml-2">
-          <i class="fab fa-whatsapp w-auto mr-2"></i>
-          3333049075
-        </span>
-      </div>            
+      <div class="absolute left-4 bottom-0">
+        <ContactBtn />
+      </div>
     </div>
 
-    <div class="card-right lg:mb-80 p-5 md:p-8 lg:p-10 text-white content-center bg-black bg-opacity-20 backdrop-blur-[2px] rounded-md">
-      <p class="text-xl md:text-4xl lg:text-3xl font-semibold offer-text">Somos distribuidores oficiales de Axalta.</p>
-      <hr class="my-6 md:my-11 lg:my-10 border-stone-300"/>
-      <p class="text-lg lg:text-2xl p-2 text-desc">Desde línea de estética automotriz, hasta complementos especializados para  el laminero, pintor y detallador automotriz. </p>
+    <div
+      class="card-right lg:mb-80 p-5 md:p-8 lg:p-10 text-white content-center rounded-md"
+    >
+      <img src="/assets/logos/logo.png" alt="Logo" class="h-72 w-auto" />
     </div>
   </div>
 </section>
 
 <style>
   .section-container {
-    margin-top: 4rem;
-   }
+    margin-top: 1rem;
+  }
 
   .card-left {
     width: 100%;
     max-width: 30%;
-    height: 275px;
+    height: 375px;
   }
 
   .card-right {
     width: 100%;
-    max-width: 32%;
+    max-width: 100%;
     height: 405px;
   }
 
@@ -47,7 +57,9 @@
     height: 6rem;
     width: auto;
     --tw-translate-y: -2rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   /* Media Query for Laptops and Desktops */
@@ -55,12 +67,12 @@
     .card-left {
       width: 100%;
       max-width: 40%;
-      height: 275px;
+      height: 375px;
     }
 
     .card-right {
       width: 100%;
-      max-width: 40%;
+      max-width: 100%;
       height: 505px;
     }
   }
@@ -83,7 +95,9 @@
       height: 6rem;
       width: auto;
       --tw-translate-y: -1rem;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
   }
 
@@ -105,7 +119,9 @@
       height: 4rem;
       width: auto;
       --tw-translate-y: -1rem;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
   }
 
@@ -124,12 +140,14 @@
     }
 
     .icon-img {
-      height: 3.50rem;
+      height: 3.5rem;
       width: auto;
       --tw-translate-y: -0.75rem;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
-    
+
     .section-container {
       margin-top: 10px !important;
     }
@@ -144,5 +162,5 @@
     .title {
       font-size: 40px;
     }
-	}
+  }
 </style>
