@@ -1,77 +1,85 @@
-
 <h2 class="text-xl mt-44 mb-8 text-center font-bold">Visitanos</h2>
-<section class="principal-container grid lg:grid-cols-2 place-items-center p-8 md:pt-12 section" id="visitanos">
+<section
+  class="principal-container grid lg:grid-cols-2 place-items-center p-8 md:pt-12 section"
+  id="visitanos"
+>
+  <iframe
+    data-aos="flip-left"
+    style="border-radius: 20px;"
+    max-width="500"
+    width="100%"
+    height="300"
+    src="https://maps.google.com/maps?width=100%25&height=400&hl=es&q=Av%205%20de%20Febrero%201085,%20Ol%C3%ADmpica,%2044430%20Guadalajara,%20Jal.+(Color%20Explosion)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+    ><a href="https://www.gps.ie/car-satnav-gps/">GPS devices</a></iframe
+  >
 
-    <iframe data-aos="flip-left" style="border-radius: 20px;" max-width="500" width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Av%205%20de%20Febrero%201085,%20Ol%C3%ADmpica,%2044430%20Guadalajara,%20Jal.+(Color%20Explosion)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS devices</a></iframe>
-        
-    <div class="p-6 info-container">
-        <div class="data-element">
-            <img src="icons/map.svg" alt="icon" class="icon1">
-            <p class="my-auto mx-1">Av 5 de Febrero 1085, Olímpica, 44430 Guadalajara, Jal.</p>
-        </div>
-        <div class="data-element">
-            <img src="icons/calendar.svg" alt="icon" class="icon2">
-            <p class="my-auto mx-1">Lunes a viernes 9am - 5:30pm <br> <span>Sabados de 9am - 1:30pm</span></p>
-            <div class="blur-circle">
-                <div class="cb-part1"></div>
-                <div class="cb-part2"></div>
-            </div>
-        </div>
+  <div class="p-6 info-container">
+    <div class="data-element">
+      <img src="icons/map.svg" alt="icon" class="icon1" />
+      <p class="my-auto mx-1">
+        Av 5 de Febrero 1085, Olímpica, 44430 Guadalajara, Jal.
+      </p>
     </div>
-    
-    <div id="contacto"></div>
+    <div class="data-element">
+      <img src="icons/calendar.svg" alt="icon" class="icon2" />
+      <p class="my-auto mx-1">
+        Lunes a viernes 9am - 5:30pm <br />
+        <span>Sabados de 9am - 1:30pm</span>
+      </p>
+      <div class="blur-circle">
+        <div class="cb-part1"></div>
+        <div class="cb-part2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contacto"></div>
 </section>
 
-
-
 <style>
+  .blur-circle {
+    left: -80px;
+  }
 
-    .blur-circle {
-        left: -80px;
-    }
+  section {
+    padding: 50px 5vw;
+  }
+  .data-element {
+    display: flex;
+    margin: 20px;
+  }
 
+  .icon1 {
+    padding: 1px 10px;
+  }
+  .icon2 {
+    padding: 1px 8px;
+    transform: scale(0.9);
+  }
+  .icon3 {
+    padding: 1px 5px;
+  }
+
+  .cost-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 1024px) {
     section {
-        padding: 50px 5vw;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 8px;
     }
-        .data-element {
-            display: flex;
-            margin: 20px;
-        }
-
-        .icon1 {
-            padding: 1px 10px;
-        }
-        .icon2 {
-            padding: 1px 8px;
-            transform: scale(0.9);
-        }
-        .icon3 {
-            padding: 1px 5px;
-        }
-
-        .cost-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-
-    @media only screen and (max-width: 1024px) {
-        section {
-            display: flex;
-            flex-direction: column;
-            padding: 10px 8px;
-        }
-        .map {
-            max-width: 100%;
-        }
-        .info-container {
-            padding: 10px 25px;
-        }
-
-        .data-element {
-            margin: 20px auto;
-        }
-
+    .map {
+      max-width: 100%;
+    }
+    .info-container {
+      padding: 10px 25px;
     }
 
+    .data-element {
+      margin: 20px auto;
+    }
+  }
 </style>

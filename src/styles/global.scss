@@ -80,7 +80,7 @@ html {
   width: 40px;
   height: 40px;
   position: relative;
-  background: var(--color-secondary);
+  background: var(--color-tertiary);
   top: 50px;
   left: 50px;
   filter: blur(50px);
@@ -89,7 +89,7 @@ html {
   width: 40px;
   height: 40px;
   position: relative;
-  background: #ff0800;
+  background: var(--color-tertiary);
   z-index: 100;
   filter: blur(50px);
 }

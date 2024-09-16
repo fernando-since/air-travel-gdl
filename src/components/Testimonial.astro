@@ -4,11 +4,12 @@ import { Image } from "astro:assets";
 const testimonials = [
   {
     name: "Adrian Alconer",
-    opinion: '"Excelente! Un servicio muy personalizado y gran varidad de productos."',
+    opinion:
+      '"Excelente! Un servicio muy personalizado y gran varidad de productos."',
     image: "frame1.svg",
     icon: "avatar2.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
-    blurClasses: ['circle1', 'circle2']
+    blurClasses: ["circle1", "circle2"],
   },
   {
     name: "Luis Ulises",
@@ -16,7 +17,7 @@ const testimonials = [
     image: "frame1.svg",
     icon: "avatar3.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
-    blurClasses: ['circle3', 'circle4']
+    blurClasses: ["circle3", "circle4"],
   },
   {
     name: "Hugo Robert Duran",
@@ -24,73 +25,87 @@ const testimonials = [
     image: "frame1.svg",
     icon: "avatar1.svg",
     link: "https://www.google.com/maps/place/Pinturas+Color+Explosion+SA+de+CV/@20.6578714,-103.3361678,17z/data=!4m8!3m7!1s0x8428b39288db1dfb:0x583fd841b5af9c82!8m2!3d20.6578664!4d-103.3335929!9m1!1b1!16s%2Fg%2F11n78vt1_l?entry=ttu",
-    blurClasses: ['circle5', 'circle6']
+    blurClasses: ["circle5", "circle6"],
   },
-]
-
-
+];
 ---
 
-<h2 class="text-xl font-bold text-center mt-48 mb-10" id="testimonios">Testimonios</h2>
+<h2 class="text-xl font-bold text-center mt-48 mb-10" id="testimonios">
+  Testimonios
+</h2>
 
 {
-        <section class={`section principal-container ${"bg-theme-light"}`} style="max-width:none;">
-          <div class="container">
-            <div class=" gap-8 md:grid md:grid-cols-2 testimonial-sec-cont" style="max-width:100vw;">
-              <div data-aos="fade-right" class={`service-carousel ${ "md:order-1"}`}>
-                {(
-                  <div class="swiper special-height">
-                    <div class="swiper-wrapper special-height">
-                      {testimonials?.map((testimonial: any) => (
+  (
+    <section
+      class={`section principal-container ${"bg-theme-light"}`}
+      style="max-width:none;"
+    >
+      <div class="container">
+        <div
+          class=" gap-8 md:grid md:grid-cols-2 testimonial-sec-cont"
+          style="max-width:100vw;"
+        >
+          <div data-aos="fade-right" class={`service-carousel ${"md:order-1"}`}>
+            {
+              <div class="swiper special-height">
+                <div class="swiper-wrapper special-height">
+                  {testimonials?.map((testimonial: any) => (
+                    <div class="swiper-slide">
+                      {/* <img src={`/assets/` + testimonial.image } alt="" class="absolute"> */}
 
-                        <div class="swiper-slide">
-                            {/* <img src={`/assets/` + testimonial.image } alt="" class="absolute"> */}
-                            
-                            <div class={testimonial.blurClasses[0]}>
-                              <div class="cb-part1"></div>
-                              <div class="cb-part2"></div>
-                            </div>
-                            <div class={testimonial.blurClasses[1]}>
-                              <div class="cb-part1"></div>
-                              <div class="cb-part2"></div>
-                            </div>
+                      <div class={testimonial.blurClasses[0]}>
+                        <div class="cb-part1" />
+                        <div class="cb-part2" />
+                      </div>
+                      <div class={testimonial.blurClasses[1]}>
+                        <div class="cb-part1" />
+                        <div class="cb-part2" />
+                      </div>
 
-                            <div class="comment-container">
-                              <div>
-                                <img src={`/icons/` + testimonial.icon } alt="" class="w-[60px] m-4">
-                              </div>
-                              <div class="text-[var(--heading-1)]">
-                                <p>{testimonial.opinion}</p>
-                                <a href={testimonial.link}><p class="font-bold mt-4">{testimonial.name}</p></a>
-                              </div>
-                            </div>
-
-                            
-
-
+                      <div class="comment-container">
+                        <div>
+                          <img
+                            src={`/icons/` + testimonial.icon}
+                            alt=""
+                            class="w-[60px] m-4"
+                          />
                         </div>
-
-                      ))}
+                        <div class="text-[var(--heading-1)]">
+                          <p>{testimonial.opinion}</p>
+                          <a href={testimonial.link}>
+                            <p class="font-bold mt-4">{testimonial.name}</p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="pagination" />
-                  </div>
-                )}
+                  ))}
+                </div>
+                <div class="pagination" />
               </div>
+            }
+          </div>
 
-              <div
-                class={`service-content mt-10 p-10  ${ "md:order-2"}`}
-              >
-                <h2 class="font-bold text-lg">Conoce algunas opiniones</h2>
-                <p class="mt-4 mb-2 text-sm">Nos importa profundamente lo que piensan nuestros clientes. Creemos que  cada opinión cuenta y nos esforzamos por escuchar y aprender de sus  experiencias. Tu comentario es invaluable para nosotros y nos ayuda a  mejorar continuamente</p>
+          <div class={`service-content mt-10 p-10  ${"md:order-2"}`}>
+            <h2 class="font-bold text-lg">Conoce algunas opiniones</h2>
+            <p class="mt-4 mb-2 text-sm">
+              Nos importa profundamente lo que piensan nuestros clientes.
+              Creemos que cada opinión cuenta y nos esforzamos por escuchar y
+              aprender de sus experiencias. Tu comentario es invaluable para
+              nosotros y nos ayuda a mejorar continuamente
+            </p>
 
-                <p class="text-sm text-[color:var(--text-color)]  mt-8">
-                  <span class="font-bold">
-                    ¡En <span class="text-[color:var(--color-primary)] bg-clip-text bg-gradient-to-br from-20% via-primary via-50%">Color Explosión</span> tu opinión nos importa! 
-                  </span>
-                    Dejanosla en nuestras redes sociales.
-                </p>
+            <p class="text-sm text-[color:var(--text-color)]  mt-8">
+              <span class="font-bold">
+                ¡En{" "}
+                <span class="text-[color:var(--color-primary)] bg-clip-text bg-gradient-to-br from-20% via-primary via-50%">
+                  Color Explosión
+                </span>{" "}
+                tu opinión nos importa!
+              </span>
+              Dejanosla en nuestras redes sociales.
+            </p>
 
-                {/* <div class="flex ">
+            {/* <div class="flex ">
                     <div class="m-6">
                         <a href="https://www.facebook.com/dental.integral.GDL" class="text-xl leading-6 text-gray-600 hover:text-gray-900">
                             <i class="fab fa-facebook mr-2"></i></a>
@@ -100,43 +115,36 @@ const testimonials = [
                             <i class="fab fa-instagram mr-2"></i></a>
                     </div>
                 </div> */}
-
-              </div>
-
-            </div>
           </div>
-        </section>
-  }
-
-
+        </div>
+      </div>
+    </section>
+  )
+}
 
 <script>
-    import { Swiper } from "swiper";
-    import "swiper/css";
-    import "swiper/css/pagination";
-    import { Autoplay, Pagination } from "swiper/modules";
+  import { Swiper } from "swiper";
+  import "swiper/css";
+  import "swiper/css/pagination";
+  import { Autoplay, Pagination } from "swiper/modules";
 
-    // astro:page-load event is fired when the page is loaded
-    document.addEventListener("astro:page-load", () => {
-      new Swiper(".service-carousel .swiper", {
-        modules: [Pagination, Autoplay],
-        autoplay: {
-          delay: 300000,
-        },
-        pagination: {
-          type: "bullets",
-          el: ".service-carousel .pagination",
-          clickable: true,
-        },
-      });
+  // astro:page-load event is fired when the page is loaded
+  document.addEventListener("astro:page-load", () => {
+    new Swiper(".service-carousel .swiper", {
+      modules: [Pagination, Autoplay],
+      autoplay: {
+        delay: 300000,
+      },
+      pagination: {
+        type: "bullets",
+        el: ".service-carousel .pagination",
+        clickable: true,
+      },
     });
-  </script>
-
-
-
+  });
+</script>
 
 <style>
-
   .comment-container {
     height: auto;
     display: flex;
@@ -184,8 +192,6 @@ const testimonials = [
     }
   }
 
-
-
   .circle1 {
     position: absolute;
     top: 50px;
@@ -216,24 +222,21 @@ const testimonials = [
     top: 155px;
     left: 140px;
   }
-    .cb-part1{
-      width: 50px;
-      height: 50px;
-      position: relative;
-      background: var(--color-secondary);
-      top: 50px;
-      left: 50px;
-      filter: blur(50px);
-    }
-    .cb-part2{
-      width: 50px;
-      height: 50px;
-      position: relative;
-      background: #ff0800;
-      z-index: 100;
-      filter: blur(50px);
-    }
-
-
-
+  .cb-part1 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: var(--color-secondary);
+    top: 50px;
+    left: 50px;
+    filter: blur(50px);
+  }
+  .cb-part2 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: #01257d;
+    z-index: 100;
+    filter: blur(50px);
+  }
 </style>
