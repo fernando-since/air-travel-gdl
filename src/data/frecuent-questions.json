@@ -1,14 +1,14 @@
 [
-	{
-		"title": "¿Qué tipo de pintura debo usar para mi vehículo?",
-		"description": "La pintura adecuada para tu vehículo dependerá del acabado que desees  lograr (como sólido, metálico, perlado o mate), del color original de tu  vehículo y de su uso (si es personal o comercial). Estos factores  influyen en la elección de una pintura que se adapte tanto estéticamente  como funcionalmente a tus necesidades y preferencias."
-	},
-	{
-		"title": "¿Cuál es la vida útil de los productos y cómo debo almacenarlos adecuadamente?",
-		"description": "En general, los productos automotrices suelen tener una vida útil de  varios años si se almacenan correctamente en un lugar fresco, seco y  alejado de la luz solar directa. Es importante mantener los productos  bien cerrados y protegidos de la humedad para preservar su calidad y  efectividad a lo largo del tiempo."
-	},
-	{
-		"title": "¿Ofrecen servicios de mezcla de pinturas a medida?",
-		"description": "Sí, ofrecemos servicios de mezcla de pinturas a medida. Nuestro equipo de expertos en pintura está capacitado para igualar con precisión el color de la pintura de tu vehículo, restaurando su apariencia original."
-	}
+  {
+    "title": "¿Puedo cambiar o cancelar mi vuelo después de haberlo reservado?",
+    "description": "Sí, las modificaciones o cancelaciones están sujetas a las políticas de la aerolínea y pueden tener costos adicionales. Contáctanos para ayudarte con el proceso."
+  },
+  {
+    "title": "¿Qué documentos necesito para viajar?",
+    "description": "Los documentos dependen del destino. Para vuelos nacionales, generalmente es suficiente con una identificación oficial. Para vuelos internacionales, necesitarás un pasaporte vigente y, en algunos casos, visa."
+  },
+  {
+    "title": "¿Tienen promociones o descuentos?",
+    "description": "Sí, constantemente buscamos las mejores ofertas y descuentos en vuelos de las principales aerolíneas. Te recomendamos segirnos en nuestras redes sociolaes para estar al tanto."
+  }
 ]

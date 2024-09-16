@@ -1,38 +1,38 @@
 ---
 const services = [
-	{
-		title: '+10',
-		text: 'Más de diez años de experiencia'
-	},
-	{
-		title: '93%',
-		text: 'De satisfacción en los clientes'
-	},
-	{
-		title: '10mil',
-		text: 'Productos vendidos cada mes'
-	}
-]
+  {
+    title: "+5",
+    text: "Más de cinco años de experiencia",
+  },
+  {
+    title: "98%",
+    text: "De satisfacción en los clientes",
+  },
+  {
+    title: "+200",
+    text: "Vuelos vendidos cada mes",
+  },
+];
 ---
 
-<div class="container-data lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 py-20 w-full mx-auto  justify-between mb-10 mt-10">
-    {
-      services.map((service) => {
-        return (
-          <div class="w-full max-w-[358px] mx-auto flex flex-row items-center gap-3 md:gap-5">
-            <h3 class="text-xl font-bold">{service.title}</h3>
-            <p class="text-md"> {service.text}</p>
-          </div>
-        )
-      })
-    }
-
+<div
+  class="container-data lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 py-20 w-full mx-auto justify-between mb-10 mt-10"
+>
+  {
+    services.map((service) => {
+      return (
+        <div class="w-full max-w-[358px] mx-auto flex flex-row items-center gap-3 md:gap-5">
+          <h3 class="text-xl font-bold">{service.title}</h3>
+          <p class="text-md"> {service.text}</p>
+        </div>
+      );
+    })
+  }
 </div>
 
-
 <style>
-	.container-data {
-		/* border-top: 1px solid rgb(205, 205, 205); */
-		border-bottom: 1px solid rgb(205, 205, 205);
-	}
+  .container-data {
+    /* border-top: 1px solid rgb(205, 205, 205); */
+    border-bottom: 1px solid rgb(205, 205, 205);
+  }
 </style>
